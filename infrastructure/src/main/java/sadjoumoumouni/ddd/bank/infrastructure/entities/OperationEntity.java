@@ -41,10 +41,6 @@ public class OperationEntity {
     @JoinColumn(name = "account_id", nullable = false)
     private BankAccountEntity account;
 
-    public OperationEntity() {
-
-    }
-
     public Operation toDomain() {
         return Operation.builder()
                 .transaction(transactionEntity.toDomain())

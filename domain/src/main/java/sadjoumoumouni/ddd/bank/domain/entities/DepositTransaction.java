@@ -1,17 +1,12 @@
 package sadjoumoumouni.ddd.bank.domain.entities;
 
-import java.util.Date;
-import java.util.UUID;
-
-import lombok.EqualsAndHashCode;
+import lombok.Data;
+import lombok.experimental.SuperBuilder;
 import sadjoumoumouni.ddd.bank.domain.valueobject.Money;
 
-@EqualsAndHashCode
+@Data
+@SuperBuilder
 public class DepositTransaction extends Transaction {
-
-    DepositTransaction(UUID uuid, Date date, Money amount) {
-        super(uuid, date, amount);
-    }
 
     public Money balanceAfterTransaction(Money balance) {
         return balance.add(amount);

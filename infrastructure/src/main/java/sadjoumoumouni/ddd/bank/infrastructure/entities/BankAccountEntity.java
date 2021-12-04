@@ -35,10 +35,6 @@ public class BankAccountEntity {
     @OneToMany(fetch = FetchType.LAZY, mappedBy="account")
     private List<OperationEntity> operations;
 
-    public BankAccountEntity() {
-
-    }
-
     public static BankAccountEntity from(BankAccount bankAccount) {
         return BankAccountEntity.builder()
                 .accountId(bankAccount.getAccountId())

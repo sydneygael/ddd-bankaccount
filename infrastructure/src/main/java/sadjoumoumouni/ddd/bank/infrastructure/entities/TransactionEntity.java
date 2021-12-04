@@ -52,10 +52,6 @@ public class TransactionEntity {
     @OneToOne(mappedBy = "transactionEntity")
     private OperationEntity user;
 
-    public TransactionEntity() {
-
-    }
-
     public static TransactionEntity from(Transaction transaction) {
 
         TransactionEntity toReturn = TransactionEntity.builder()
