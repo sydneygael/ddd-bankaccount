@@ -5,9 +5,11 @@ import java.util.Locale;
 import java.util.UUID;
 
 import lombok.Builder;
+import lombok.Data;
 import sadjoumoumouni.ddd.bank.domain.valueobject.Money;
 
 @Builder
+@Data
 public abstract class Transaction {
 
     private static String datePattern = "dd MMMMM yyyy HH:mm:ss ";

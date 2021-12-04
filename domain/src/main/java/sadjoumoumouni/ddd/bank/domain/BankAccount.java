@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.UUID;
 
+import lombok.Builder;
 import lombok.Data;
 import sadjoumoumouni.ddd.bank.domain.entities.DepositTransaction;
 import sadjoumoumouni.ddd.bank.domain.entities.Transaction;
@@ -17,6 +18,7 @@ import sadjoumoumouni.ddd.bank.domain.valueobject.Money;
     Aggregate Root
  */
 @Data
+@Builder
 public class BankAccount {
 
     private Long accountId;
