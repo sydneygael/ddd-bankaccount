@@ -11,7 +11,7 @@ import sadjoumoumouni.ddd.bank.domain.ports.outgoing.AccountPort;
 import sadjoumoumouni.ddd.bank.infrastructure.entities.BankAccountEntity;
 import sadjoumoumouni.ddd.bank.infrastructure.entities.TransactionEntity;
 
-@Component
+//@Component
 public class JpaBankAccountRepository implements AccountPort {
 
     BankAccountJpaRepository bankAccountJpaRepository;

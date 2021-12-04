@@ -13,17 +13,18 @@ import sadjoumoumouni.ddd.bank.domain.ports.incoming.ListOperationsUseCase;
 import sadjoumoumouni.ddd.bank.domain.ports.incoming.WithdrawUseCase;
 
 @RestController
-@RequestMapping("/account")
+@RequestMapping("/api/account")
 public class BankAccountController {
 
     private final DepositUseCase depositUseCase;
     private final WithdrawUseCase withdrawUseCase;
     private final ListOperationsUseCase listOperationsUseCase;
 
-    @Autowired
+
     /**
      * BankAccountApplicationService is injected
      */
+    @Autowired
     public BankAccountController(DepositUseCase depositUseCase, WithdrawUseCase withdrawUseCase, ListOperationsUseCase listOperationsUseCase) {
         this.depositUseCase = depositUseCase;
         this.withdrawUseCase = withdrawUseCase;
