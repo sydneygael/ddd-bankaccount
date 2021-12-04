@@ -39,7 +39,7 @@ public class BankAccountEntity {
 
     }
 
-    public BankAccountEntity from(BankAccount bankAccount) {
+    public static BankAccountEntity from(BankAccount bankAccount) {
         return BankAccountEntity.builder()
                 .accountId(bankAccount.getAccountId())
                 .balance(bankAccount.getBalance().getAmount())

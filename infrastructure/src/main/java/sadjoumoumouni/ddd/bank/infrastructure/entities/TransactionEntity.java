@@ -26,7 +26,7 @@ import sadjoumoumouni.ddd.bank.domain.valueobject.Money;
 @Table(name = "transaction")
 @Builder
 @Data
-public class TransactionEntity implements Serializable {
+public class TransactionEntity {
 
     enum Type {
         WITHDRAW, DEPOSIT;
@@ -56,7 +56,7 @@ public class TransactionEntity implements Serializable {
 
     }
 
-    public TransactionEntity from(Transaction transaction) {
+    public static TransactionEntity from(Transaction transaction) {
 
         TransactionEntity toReturn = TransactionEntity.builder()
                 .uuid(transaction.getUuid().toString())

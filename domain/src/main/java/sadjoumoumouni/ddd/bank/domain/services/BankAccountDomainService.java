@@ -13,6 +13,10 @@ public class BankAccountDomainService implements DepositUseCase, WithdrawUseCase
 
     AccountPort accountPort;
 
+    public BankAccountDomainService(AccountPort repository) {
+        this.accountPort = repository;
+    }
+
     @Override
     public void deposit(Long id, BigDecimal amount) {
         BankAccount account = accountPort.loadAccountById(id)
