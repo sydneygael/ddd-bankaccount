@@ -29,7 +29,7 @@ public class BankAccount {
 
     private Long accountId;
     private Money balance;
-    Operations operations;
+    Operations operations = new Operations();
 
 
     public BankAccount(Long accountId, BigDecimal balance) {
